@@ -127,58 +127,93 @@
         </div>
 
 
-        <div class="totalScore">
+        <div id="totalScore">
             <h3>Your total score is:</h3>
         </div>
 
         <script type="text/javascript">
+
+
+            
+            var totalScore = $("#totalScore");    
+            var score = 0
 
             var total = 0
             var getNum = Math.floor((Math.random() * 100) + 12);
             console.log(getNum)
             var randNum = $("#randNum");
 
-            randNum.html("Random Number: " + getNum)
+            totalScore.html("Your total score is : " + total)
+
+
+
+             randNum.html("Random Number: " + getNum)
 
 
             //generate random numbers for individual crystals
-            var  crystal1 = Math.floor((Math.random() * 12) + 1);
+            var crystal1 = Math.floor((Math.random() * 12) + 1);
             console.log(crystal1)
 
-            var  crystal2 = Math.floor((Math.random() * 12) + 1);
+            var crystal2 = Math.floor((Math.random() * 12) + 1);
             console.log(crystal2)
-         
-            var  crystal3 = Math.floor((Math.random() * 12) + 1);
+
+            var crystal3 = Math.floor((Math.random() * 12) + 1);
             console.log(crystal3)
-            
-            var  crystal4 = Math.floor((Math.random() * 12) + 1);
+
+            var crystal4 = Math.floor((Math.random() * 12) + 1);
             console.log(crystal4)
-           
 
-            $("#crystal1").on("click", function(){
-                alert(crystal1)
-                
+
+            $("#crystal1").on("click", function () {
+                total = total + crystal1;
+
+                totalScore.html("Your total score is : " + total)
+
+                $("#crystal1").on("click", function () {
+                total = total + crystal1;
+
+                totalScore.html("Your total score is : " + total)
+
+
+                if (total === randNum) {
+                    console.log("You Win!")
+                  
+                //    ("Your total score is : " + score)
+
+                }
+
+                else if (total > randNum) {
+                    console.log("You Lose!")
+
+                }
+
+                else  {
+                    console.log("Keep Trying")
+
+                }
+
+
             })
 
-            $("#crystal2").on("click", function(){
-                alert(crystal2)
-                
+            $("#crystal2").on("click", function () {
+                console.log(crystal2)
+
             })
 
-            $("#crystal3").on("click", function(){
-                alert(crystal3)
-                
+            $("#crystal3").on("click", function () {
+                console.log(crystal3)
+
             })
 
-            $("#crystal4").on("click", function(){
-                alert(crystal4)
-                
+            $("#crystal4").on("click", function () {
+                console.log(crystal4)
+
             })
 
 
 
 
-           
+
 
         </script>
 
