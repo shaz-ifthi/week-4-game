@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Added a link to Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 id="numGuess"></h1>
+
+<script>
+    var total = 0
+    var randNum = Math.floor( Math.random() * 100 )
+
+</script>
+
+    <section id="main">
+        <div class="row">
+            <div class="col-md-8">
+
+                <div class="jumbotron">
+                    <h1 class="text-center">Crystal Collector !</h1>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+
+                    <ul>
+                        <p>You will be given a random number at the start of the game.</p>
+
+                        <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points
+                            to your total score
+                        </p>
+
+
+                        <p>You win the game by matching your total score to the random number. You lose the game if your total
+                            score goes above the random number.</p>
+
+                        <p>The value of each crystal is hidden from you until you click on it.</p>
+
+                        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
+    <script src="javaScript.js"></script>
+    
+
+
+
+        <section id="randWinsLosses">
+
+            <div class="row">
+                <div class="col-md-3">
+
+                    <div id="randNum">
+                        <h2>Random Number: </h2>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+                    <div id="winsLosses">
+                        <h2>Wins:
+                            <span id="numberWins"></span>
+                            </br>
+                            Losses:
+                            <span id="numberLosses"></span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- <script>
+            var total = 0
+            var randNum = Math.floor(Math.random() * 100)
+            $("#numGuess").text("Click the Crystals to Match the Number : " + randNum)
+
+
+        </script> -->
+
+
+
+        <div id="crystals">
+
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="./Crystal-Collector/images/blue.jpg">
+                </div>
+
+                <div class="col-md-3"> 
+                <img src="./Crystal-Collector/images/diamond.jpg">
+                 </div> 
+
+                <div class="col-md-3">
+                <img src="./Crystal-Collector/images/rainbow.jpg">
+                </div> 
+
+                <div class="col-md-3">
+                <img src="./Crystal-Collector/images/ruby.jpg">
+                </div> 
+
+            </div>
+        </div>
+
+        <div class="totalScore">
+            <h3>Your total score is:</h3>
+        </div>
+
+
+</body>
+
+</html>
+
+
+
+
