@@ -14,11 +14,11 @@
 <body>
     <h1 id="numGuess"></h1>
 
-<script>
-    var total = 0
-    var randNum = Math.floor( Math.random() * 100 )
+    <!-- <script>
+        var total = 0
+        var randNum = Math.floor(Math.random() * 100)
 
-</script>
+    </script> -->
 
     <section id="main">
         <div class="row">
@@ -56,36 +56,39 @@
     </section>
 
     <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
-    <script src="javaScript.js"></script>
-    
+    <!-- <script src="assets/javascript/game.js"></script> -->
 
 
 
-        <section id="randWinsLosses">
+    <section id="randWinsLosses">
 
-            <div class="row">
-                <div class="col-md-3">
+        <div class="row">
+            <div class="col-md-4">
 
-                    <div id="randNum">
-                        <h2>Random Number: </h2>
-                    </div>
-
+                <div id="randNum">
+                    <h2>Random Number: </h2>
                 </div>
 
-                <div class="col-md-3">
-                    <div id="winsLosses">
-                        <h2>Wins:
-                            <span id="numberWins"></span>
-                            </br>
-                            Losses:
-                            <span id="numberLosses"></span>
-                        </h2>
-                    </div>
-                </div>
             </div>
 
-        </section>
-        <!-- <script>
+            <div class="col-md-4">
+                <div id="winsLosses">
+                    <h2>Wins:
+                        <span id="numberWins"></span>
+                        </br>
+                        Losses:
+                        <span id="numberLosses"></span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+    <!-- <script>
             var total = 0
             var randNum = Math.floor(Math.random() * 100)
             $("#numGuess").text("Click the Crystals to Match the Number : " + randNum)
@@ -95,37 +98,91 @@
 
 
 
-        <div id="crystals">
+    <div id="crystals">
 
-            <div class="row">
+
+        <div class="row">
+            <div id="crystal1">
                 <div class="col-md-3">
-                    <img src="./Crystal-Collector/images/blue.jpg">
+                    <img src="./assets/images/blue.jpg">
                 </div>
-
-                <div class="col-md-3"> 
-                <img src="./Crystal-Collector/images/diamond.jpg">
-                 </div> 
-
-                <div class="col-md-3">
-                <img src="./Crystal-Collector/images/rainbow.jpg">
-                </div> 
-
-                <div class="col-md-3">
-                <img src="./Crystal-Collector/images/ruby.jpg">
-                </div> 
-
             </div>
+
+            <div id="crystal2">
+                <div class="col-md-3">
+                    <img src="./assets/images/diamond.jpg">
+                </div>
+            </div>
+            <div id="crystal3">
+                <div class="col-md-3">
+                    <img src="./assets/images/rainbow.jpg">
+                </div>
+            </div>
+            <div id="crystal4">
+                <div class="col-md-3">
+                    <img src="./assets/images/ruby.jpg">
+                </div>
+            </div>
+
         </div>
+
 
         <div class="totalScore">
             <h3>Your total score is:</h3>
         </div>
 
+        <script type="text/javascript">
+
+            var total = 0
+            var getNum = Math.floor((Math.random() * 100) + 12);
+            console.log(getNum)
+            var randNum = $("#randNum");
+
+            randNum.html("Random Number: " + getNum)
+
+
+            //generate random numbers for individual crystals
+            var  crystal1 = Math.floor((Math.random() * 12) + 1);
+            console.log(crystal1)
+
+            var  crystal2 = Math.floor((Math.random() * 12) + 1);
+            console.log(crystal2)
+         
+            var  crystal3 = Math.floor((Math.random() * 12) + 1);
+            console.log(crystal3)
+            
+            var  crystal4 = Math.floor((Math.random() * 12) + 1);
+            console.log(crystal4)
+           
+
+            $("#crystal1").on("click", function(){
+                alert(crystal1)
+                
+            })
+
+            $("#crystal2").on("click", function(){
+                alert(crystal2)
+                
+            })
+
+            $("#crystal3").on("click", function(){
+                alert(crystal3)
+                
+            })
+
+            $("#crystal4").on("click", function(){
+                alert(crystal4)
+                
+            })
+
+
+
+
+           
+
+        </script>
+
 
 </body>
 
 </html>
-
-
-
-
