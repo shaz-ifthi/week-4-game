@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Crystal Collector</title>
     <!-- Added a link to Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
@@ -13,95 +13,114 @@
 </head>
 
 <body>
-    <h1 id="numGuess"></h1>
+
+    <div id="wholePage">
+
+        <h1 id="numGuess"></h1>
 
 
-    <section id="main">
-        <div class="row">
-            <div class="col-md-8">
+        <section id="main">
+            <div class="row">
+                <div class="col-md-12">
 
-                <div class="jumbotron">
-                    <h1 class="text-center">Crystal Collector !</h1>
+                    <div class="jumbotron">
+                        <h1 class="text-center">Crystal Collector !</h1>
+                    </div>
+
                 </div>
-
             </div>
-        </div>
+        </section>
 
         <div class="container">
+            <!-- <div class="row">
+            <div class="col-md-4"> -->
+
+            <ul>
+                <p>You will be given a random number at the start of the game.</p>
+
+                <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your
+                    total score
+                </p>
+
+
+                <p>You win the game by matching your total score to the random number. You lose the game if your total score
+                    goes above the random number.</p>
+
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+
+                <p>Each time when the game starts, the game will change the values of each crystal.</p>
+            </ul>
+            <!-- </div>
+        </div> -->
+        </div>
+        <!-- </section> -->
+
+        <section id="randWinsLosses">
+
+
             <div class="row">
                 <div class="col-md-4">
 
-                    <ul>
-                        <p>You will be given a random number at the start of the game.</p>
+                    <div id="randNum_id">
+                        <h2>Random Number: </h2>
+                    </div>
 
-                        <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points
-                            to your total score
-                        </p>
-
-
-                        <p>You win the game by matching your total score to the random number. You lose the game if your total
-                            score goes above the random number.</p>
-
-                        <p>The value of each crystal is hidden from you until you click on it.</p>
-
-                        <p>Each time when the game starts, the game will change the values of each crystal.</p>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="randWinsLosses">
-
-        <div class="row">
-            <div class="col-md-4">
-
-                <div id="randNum_id">
-                    <h2>Random Number: </h2>
                 </div>
 
-            </div>
-
-            <div class="col-md-4">
-                <div id="winsLosses">
-                    <h2>Wins:
-                        <span id="wins"></span>
-                        </br>
-                        Losses:
-                        <span id="losses"></span>
-                    </h2>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <div id="crystals">
-
-
-        <div class="row">
-            <div id="crystal1_id">
-                <div class="col-md-3">
-                    <img src="./assets/images/blue.jpg">
+                <div class="col-md-4">
+                    <div id="winsLosses">
+                        <h2>Wins:
+                            <span id="wins"></span>
+                            </br>
+                            Losses:
+                            <span id="losses"></span>
+                        </h2>
+                    </div>
                 </div>
             </div>
 
-            <div id="crystal2_id">
-                <div class="col-md-3">
-                    <img src="./assets/images/green.jpg">
-                </div>
-            </div>
-            <div id="crystal3_id">
-                <div class="col-md-3">
-                    <img src="./assets/images/purple.jpg">
-                </div>
-            </div>
-            <div id="crystal4_id">
-                <div class="col-md-3">
-                    <img src="./assets/images/ruby.jpg">
-                </div>
-            </div>
+        </section>
 
+
+        <div id="crystals">
+
+            <div class="row">
+
+                <div id="empty1">
+                    <div class="col-md-2">
+
+                    </div>
+                </div>
+
+                <div id="crystal1_id">
+                    <div class="col-md-2">
+                        <img src="./assets/images/blue.jpg" alt="" width="130" height="130">
+                    </div>
+                </div>
+
+                <div id="crystal2_id">
+                    <div class="col-md-2">
+                        <img src="./assets/images/green.jpg" alt="" width="150" height="150">
+                    </div>
+                </div>
+                <div id="crystal3_id">
+                    <div class="col-md-2">
+                        <img src="./assets/images/purple.jpg" alt="" width="150" height="150">
+                    </div>
+                </div>
+                <div id="crystal4_id">
+                    <div class="col-md-2">
+                        <img src="./assets/images/ruby.jpg" alt="" width="150" height="150">
+                    </div>
+                </div>
+
+                <div id="empty2">
+                    <div class="col-md-2">
+
+                    </div>
+                </div>
+
+            </div>
         </div>
 
 
@@ -109,199 +128,11 @@
             <h3>Your total score is:</h3>
         </div>
 
+    </div>
+
         <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-        <!-- <script src="assets/javascript/game.js"></script> -->
+        <script src="assets/javascript/game.js"></script>
 
-        <script type="text/javascript">
-
-
-            /***** Variables  *****/
-            var totalScore = $("#totalScore");
-            var score = 0
-
-            var total = 0
-            // var randNum = Math.floor((Math.random() * 100) + 12);
-            // console.log(randNum)
-            var wins = $("#wins");
-            var losses = $("#losses");
-            var numId = $("#randNum_id");
-
-            var crystal1
-            var crystal2
-            var crystal3
-            var crystal4
-            var randNum
-            var winCount = 0
-            var lossCount = 0
-
-
-            function resetValue() {
-                //generate random number and get values for individual crystals
-
-                randNum = Math.floor(Math.random() * 88) + 12;
-                console.log("Random Number = " + randNum)
-
-                crystal1 = Math.floor((Math.random() * 11) + 1);
-                console.log("Crystal1 value =  " + crystal1)
-
-                crystal2 = Math.floor((Math.random() * 11) + 1);
-                console.log("Crystal2 value =  " + crystal2)
-
-                crystal3 = Math.floor((Math.random() * 11) + 1);
-                console.log("Crystal3 value =  " + crystal3)
-
-                crystal4 = Math.floor((Math.random() * 11) + 1);
-                console.log("Crystal4 value =  " + crystal4)
-
-                total = 0;
-            }
-            resetValue()
-
-            /***** jQuery *****/
-            totalScore.html("Your total score is : " + total)
-            numId.html("Random Number: " + randNum)
-
-
-            /****** Functions *****/
-
-            $("#crystal1_id").on("click", function () {
-                console.log(crystal1)
-                total = total + crystal1;
-
-                // console.log("total = " + total + " randNum = " + randNum)
-                totalScore.html("Your total score is : " + total)
-
-                if (total === randNum) {
-                    console.log("You Win!")
-                    resetValue();
-                    winCount = winCount + 1;
-                    wins.html(winCount)
-                    numId.html("Random Number: " + randNum)
-                    totalScore.html("Your Total Score is: " + total)
-                    console.log("Total Score: " + total)
-                }
-
-                else if (total > randNum) {
-                    console.log("You Lose!")
-                    resetValue();
-                    lossCount = lossCount + 1;
-                    losses.html(lossCount)
-                    numId.html("Random Number: " + randNum)
-                    totalScore.html("Your Total Score is: " + total)
-                    console.log("Total Score: " + total)
-                }
-
-                else {
-                    console.log("Keep Trying")
-                    console.log("Total Score: " + total)
-                    // resetValue();
-                }
-            })
-
-
-            $("#crystal2_id").on("click", function () {
-                console.log(crystal2)
-                total = total + crystal2;
-                totalScore.html("Your total score is : " + total)
-
-                if (total === randNum) {
-                    console.log("You Win!")
-                    resetValue();
-                    winCount = winCount + 1;
-                    wins.html(winCount)
-                    numId.html("Random Number: " + randNum)
-                    totalScore.html("Your Total Score is: " + total)
-                    console.log("Total Score: " + total)
-                }
-
-                else if (total > randNum) {
-                    console.log("You Lose!")
-                    resetValue();
-                    lossCount = lossCount + 1;
-                    losses.html(lossCount)
-                    numId.html("Random Number: " + randNum)
-                    totalScore.html("Your Total Score is: " + total)
-                    console.log("Total Score: " + total)
-                }
-
-                else {
-                    console.log("Keep Trying")
-                    console.log("Total Score: " + total)
-
-                }
-            })
-
-            $("#crystal3_id").on("click", function () {
-                console.log(crystal3)
-                total = total + crystal3;
-                // console.log("total = " + total)
-                totalScore.html("Your total score is : " + total)
-
-                if (total === randNum) {
-                    console.log("You Win!")
-                    resetValue();
-                    winCount = winCount + 1;
-                    wins.html(winCount)
-                    numId.html("Random Number: " + randNum)
-                    totalScore.html("Your Total Score is: " + total)
-                    console.log("Total Score: " + total)
-                }
-
-                else if (total > randNum) {
-                    console.log("You Lose!")
-                    resetValue();
-                    lossCount = lossCount + 1;
-                    losses.html(lossCount)
-                    numId.html("Random Number: " + randNum)
-                    totalScore.html("Your Total Score is: " + total)
-                    console.log("Total Score: " + total)
-                }
-
-                else {
-                    console.log("Keep Trying")
-                    console.log("Total Score: " + total)
-                    // resetValue();
-                }
-            })
-
-
-            $("#crystal4_id").on("click", function () {
-                console.log(crystal4)
-                total = total + crystal4;
-
-                totalScore.html("Your total score is : " + total)
-
-
-                if (total === randNum) {
-                    console.log("You Win!")
-                    resetValue();
-                    winCount = winCount + 1;
-                    wins.html(winCount)
-                    numId.html("Random Number: " + randNum)
-                    totalScore.html("Your Total Score is: " + total)
-                    console.log("Total Score: " + total)
-                }
-
-                else if (total > randNum) {
-                    console.log("You Lose!")
-                    resetValue();
-                    lossCount = lossCount + 1;
-                    losses.html(lossCount)
-                    numId.html("Random Number: " + randNum)
-                    totalScore.html("Your Total Score is: " + total)
-                    console.log("Total Score: " + total)
-                }
-
-                else {
-                    console.log("Keep Trying")
-                    console.log("Total Score: " + total)
-                    // resetValue();
-                }
-
-
-            })
-
-        </script>
 
 
 </body>
