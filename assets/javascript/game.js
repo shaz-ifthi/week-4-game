@@ -47,7 +47,8 @@
         /* common if elseIf and else statement to be used in all 4 crystals */
         function ifElse() {
             if (total === randNum) {
-                console.log("You Win!")
+                // console.log("You Win!")
+                // alert("You Win!!!")
                 resetValue();
                 winCount = winCount + 1;
                 wins.html(winCount)
@@ -57,7 +58,8 @@
             }
 
             else if (total > randNum) {
-                console.log("You Lose!")
+                // console.log("You Lose!")
+                // alert(("You Lose!"))
                 resetValue();
                 lossCount = lossCount + 1;
                 losses.html(lossCount)
